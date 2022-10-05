@@ -1,0 +1,110 @@
+
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>History Collector</title>
+    <style>
+    @font-face{
+      font-family: Quicksand;
+      src: url(fonts/Quicksand-Regular.otf);
+    }
+    body{
+      font-family: Quicksand;
+      min-width: 800px;
+    }
+    .faviconDiv{
+			display: inline;
+		}
+		.favicon{
+			width: 16px;
+			height: 16px;
+      margin-top: 4px;
+      margin-bottom: -4px;
+			z-index: 0;
+		}
+    .faviconTitle{
+      margin-bottom: -3px;
+      width: 16px;
+      height: 16px;
+    }
+    .dateDiv{
+      background-color: black;
+      color: white;
+      padding-left: 8px;
+      padding-right: 8px;
+      display: inline-block;
+      font-size: 11pt;
+      height: 18px;
+      width: 80px;
+    }
+    #title{
+      position: fixed;
+      top: 0px; 
+      left: 0px;
+      right: 10px;
+      display: block;
+      background: white;
+      z-index: 1;
+      display: inline;
+    }
+    #titleFilters{
+      float: right;
+    }
+    .tableTitle{
+      background-color: black;
+      color: white;
+    }
+    .tableContent{
+      background-color: black;
+      color: white;
+      font-size: 12pt;
+    }
+    .tableIcon{
+      width: 16px;
+      height: 16px;
+      padding-top: 2px;
+      margin-bottom: -1px;
+    }
+    .tableIconLong{
+      width: 48px;
+      height: 16px;
+      padding-top: 2px;
+      margin-left: -2px;
+      margin-bottom: -1px;
+    }
+    a:link {text-decoration: none;}      /* unvisited link */
+    a:visited {text-decoration: none;}  /* visited link */
+    a:hover {text-decoration: none;}  /* mouse over link */
+    a:active {text-decoration: none;}  /* selected link */
+    .toggleSelected{
+      opacity: 1;
+    }
+    .toggleDeselected{
+      opacity: 0.2;
+    }
+    #topFavicons{
+      display: inline;
+    }
+    #faviconHolder{
+      margin-top: 16px;
+    }
+    </style>
+    <script src='history_collector.js'></script>
+  </head>
+
+  <body>
+    <div id="title" style="margin-left: 8px;">
+      <img src="images/icon-home-b.png" class="tableIcon"/> Iconic History 
+      <div id="titleFilters">
+        <img src="images/icon-filter-b.png" class="tableIcon"/>: 
+        <div id="topFavicons"> Loading... </div>
+          <a href="#" class="toggleDeselected" id="0_ih_t_time"><img src="images/icon-0-6.png" class="tableIconLong"/></a>
+          <a href="#" class="toggleDeselected" id="1_ih_t_time"><img src="images/icon-6-12.png" class="tableIconLong"/></a>
+          <a href="#" class="toggleDeselected" id="2_ih_t_time"><img src="images/icon-12-18.png" class="tableIconLong"/></a>
+          <a href="#" class="toggleDeselected" id="3_ih_t_time" style="margin-right: 4px;"><img src="images/icon-18-24.png" class="tableIconLong"/></a>
+      </div>
+    </div>
+    <div id="faviconHolder"></div>
+  </body>
+</html>
